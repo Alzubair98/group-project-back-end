@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
   def new; end
 
   def create
-    reservations = Reservation.create!(user_id: params[:reservation][:user_id],
+    reservations = Reservation.create!(user: User.find_by(username: params[:reservation][:user]),
                                        location: params[:reservation][:location])
 
     if reservations
