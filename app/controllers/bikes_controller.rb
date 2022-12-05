@@ -49,16 +49,17 @@ class BikesController < ApplicationController
     else
       render json: @bike.errors,  status: :unprocessable_entity
     end
-    # respond_to do |format|
-    #   format.html { redirect_to bikes_url, notice: "Bike was successfully destroyed." }
-    #   format.json { head :no_content }
-    # end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bike
       @bike = Bike.find(params[:id])
+      if @bike
+        render json: @bike, status: 200
+      else
+        render json: @bike.errors, status: :unprocessable_entity
+      end
     end
 
     # Only allow a list of trusted parameters through.
