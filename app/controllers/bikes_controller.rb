@@ -22,15 +22,10 @@ class BikesController < ApplicationController
   # POST /bikes or /bikes.json
   def create
     @bike = Bike.new(bike_params)
-
-    respond_to do |format|
-      if @bike.save
-        format.html { redirect_to bike_url(@bike), notice: "Bike was successfully created." }
-        format.json { render :show, status: :created, location: @bike }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @bike.errors, status: :unprocessable_entity }
-      end
+    if @bike.save
+      render json: @bike, status: 200
+    else
+      render json: @bike.errors, status: :unprocessable_entity
     end
   end
 
