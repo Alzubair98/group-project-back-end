@@ -45,7 +45,7 @@ class BikesController < ApplicationController
     if @bike.destroy
       render json: @bike, status: 200
     else
-      render json: @bike.errors,  status: :unprocessable_entity
+      render json: @bike.errors, status: :unprocessable_entity
     end
   end
 
