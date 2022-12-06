@@ -4,6 +4,11 @@ class BikesController < ApplicationController
   # GET /bikes or /bikes.json
   def index
     @bikes = Bike.all
+    if @bikes
+      render json: @bikes, status: 200
+    else
+      render json: @bikes.errors, status: :unprocessable_entity
+    end
   end
 
   # GET /bikes/1 or /bikes/1.json
