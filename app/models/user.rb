@@ -4,4 +4,5 @@ class User < ApplicationRecord
                        length: { minimum: 3, maximum: 90 },
                        uniqueness: { case_sensitive: false }
   has_many :reservations, dependent: :destroy
+  has_many :bikes, through: :reservations
 end

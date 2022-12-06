@@ -33,3 +33,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#ignore default styles
+.vscode/
+
+#Ignore .env file
+.env
