@@ -50,19 +50,15 @@ class BikesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bike
-      @bike = Bike.find(params[:id])
-      if @bike
-        render json: @bike, status: 200
-      else
-        render json: @bike.errors, status: :unprocessable_entity
-      end
-    end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_bike
     @bike = Bike.find(params[:id])
+    if @bike
+      render json: @bike, status: 200
+    else
+      render json: @bike.errors, status: :unprocessable_entity
+    end
   end
 
   # Only allow a list of trusted parameters through.
