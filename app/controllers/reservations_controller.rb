@@ -4,6 +4,13 @@ class ReservationsController < ApplicationController
     render json: reservations
   end
 
+  def show 
+    reservation = Reservation.find(params[:id])
+    render json: { user: reservation.user,
+       bike: reservation.bike
+    }
+  end
+
   def new; end
 
   def create
