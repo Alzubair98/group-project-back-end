@@ -21,4 +21,13 @@ class ReservationsController < ApplicationController
       }
     end
   end
+
+
+  def destroy 
+    reservation = Reservation.find(params[:reservation][:id])
+    reservation.destroy
+    render json: {status:200, reservation_deleted: true}
+  end
+
+
 end
