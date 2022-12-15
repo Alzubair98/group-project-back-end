@@ -62,6 +62,8 @@ This end point is used to reserve a bike
 
 **POST** `http://127.0.0.1:3000/reservations`
 
+The user and
+
 ##### Request body
 
 ```
