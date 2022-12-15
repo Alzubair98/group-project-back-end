@@ -1,5 +1,123 @@
 Vesrion:  1.0.0
 
+#### Title: user registration
+
+##### Description
+This end point is used to create an account for a user. the only parameter required is the username.
+
+##### End oint
+**POST** `http://localhost:3000/sessions`
+
+##### Sample request
+ 
+```
+{
+    "user": {"username": "francis"}
+}
+```
+
+#### Sample response:
+```
+{
+    "stauts": "created",
+    "logged_in": true,
+    "user": {
+        "id": 1,
+        "username": "francis",
+        "created_at": "2022-12-02T16:21:10.813Z",
+        "updated_at": "2022-12-02T16:21:10.813Z"
+    }
+}
+```
+
+#### Title: logout
+
+##### Description
+This API is used to logout a user
+
+##### End point
+
+**DELETE** `http://localhost:3000/logout`
+
+##### Sample response
+```
+{
+    "status": 200,
+    "logged_out": true
+}
+```
+
+#### Title: reserve a bike
+
+##### Description
+
+This end point is used to reserve a bike
+
+##### End point
+
+**POST**  `http://127.0.0.1:3000/reservations`
+
+##### Request body
+
+```
+ {
+    "reservation": { 
+        "user": "wayungi",
+        "bike":"Honda",
+        "location":"Kampala"
+    }
+}
+```
+
+##### Sample output
+````
+ {
+    "reservations": {
+        "id": 8,
+        "user_id": 2,
+        "location": "Kampala",
+        "created_at": "2022-12-15T05:41:06.509Z",
+        "updated_at": "2022-12-15T05:41:06.509Z",
+        "bike_id": 4
+    }
+}
+````
+
+
+#### Title: Get user's reservations
+
+##### Description
+This end point is used to get all the reservations of a single user.
+
+##### End point
+**GET**  `http://127.0.0.1:3000/reservations/{user_id}`
+
+##### sample request
+
+`http://127.0.0.1:3000/reservations/2`
+
+##### sample output
+
+```
+{
+    "user": {
+        "id": 1,
+        "username": "francis",
+        "created_at": "2022-12-02T16:21:10.813Z",
+        "updated_at": "2022-12-02T16:21:10.813Z"
+    },
+    "bike": {
+        "id": 5,
+        "name": "Twin Cam",
+        "image": "https://picsum.photos/200",
+        "description": "Nice bicycle for kids",
+        "price": "700000.0",
+        "created_at": "2022-12-05T22:38:40.192Z",
+        "updated_at": "2022-12-05T22:38:40.192Z"
+    }
+}
+```
+
 #### Title: Get bike details
 
 ##### Description 
