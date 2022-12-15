@@ -1,22 +1,23 @@
 Vesrion:  1.0.0
 
-Title: user registration
+## Title: user registration
 
-Description: 
-This end point is used to create an account for a user. the only parameter required is the username.
+##### Description
+This end point is used to create an account for a user. The only parameter required is the username.
 
-End point:
-POST: http://localhost:3000/sessions
+##### End point
+**POST** `http://localhost:3000/sessions`
 
-Sample request
+##### Sample request body
  
+```
 {
     "user": {"username": "francis"}
 }
+```
 
-
-Sample response:
-
+#### Sample response body
+```
 {
     "stauts": "created",
     "logged_in": true,
@@ -27,28 +28,38 @@ Sample response:
         "updated_at": "2022-12-02T16:21:10.813Z"
     }
 }
---------------------------------------------------------
+```
 
-title: logout
+## Title: logout
 
-Description: This API is used to logout a user
+##### Description
+This API is used to logout a user
 
-end point: 
-DELETE: http://localhost:3000/logout
+##### End point
 
-Sample response:
+**DELETE** `http://localhost:3000/logout`
+
+##### Sample response
+```
 {
     "status": 200,
     "logged_out": true
 }
----------------------------------------------------------------
+```
 
-title: reserve a bike
- Description: This end point is used to reserve a bike
- end point: 
- POST: http://127.0.0.1:3000/reservations
+## Title: reserve a bike
 
- request body
+##### Description
+
+This end point is used to reserve a bike
+
+##### End point
+
+**POST**  `http://127.0.0.1:3000/reservations`
+
+##### Request body
+
+```
  {
     "reservation": { 
         "user": "wayungi",
@@ -56,8 +67,10 @@ title: reserve a bike
         "location":"Kampala"
     }
 }
+```
 
- Sample output:
+##### Sample output
+````
  {
     "reservations": {
         "id": 8,
@@ -68,18 +81,24 @@ title: reserve a bike
         "bike_id": 4
     }
 }
-------------------------------------------------------
+````
 
-title: Get user's reservations
 
-Description: This end point is used to get all the reservations of a single user.
+## Title: Get user's reservations
 
-end point: 
-GET: http://127.0.0.1:3000/reservations/{user_id}
+##### Description
+This end point is used to get all the reservations of a single user.
 
-sample request: http://127.0.0.1:3000/reservations/2
+##### End point
+**GET**  `http://127.0.0.1:3000/reservations/{user_id}`
 
-sample output:
+##### Sample request
+
+`http://127.0.0.1:3000/reservations/2`
+
+##### Sample output
+
+```
 {
     "user": {
         "id": 1,
@@ -97,25 +116,22 @@ sample output:
         "updated_at": "2022-12-05T22:38:40.192Z"
     }
 }
+```
 
+## Title: Get bike details
 
+##### Description 
+This API returns the name, image url, description and price  of a particulr bike.
 
+##### End point
+`http://127.0.0.1:3000/bikes/{id}`
 
+##### Sample request
+`http://127.0.0.1:3000/bikes/1`
 
+##### Sample response
 
-
-
-
-----------------------------------------------------------------------
-Title: Get bike details
-
-Description: This API returns the name, image url, description and price  of a particulr bike.
-
-End point: http://127.0.0.1:3000/bikes/{id}
-
-Sample request: http://127.0.0.1:3000/bikes/1
-
-Sample: response:
+``` 
 {
  "id": 2,
     "name": "Yamaha",
@@ -125,19 +141,22 @@ Sample: response:
     "created_at": "2022-12-05T21:34:29.476Z",
     "updated_at": "2022-12-05T21:34:29.476Z"
 }
+```
 
------------------------------------------------------------------------
-Vesrion:  1.0.0
 
-Title: Get All bikes
+## Title: Get All bikes
 
-Description: This API returns all the bikes in the databases.
+##### Description
+This API returns all the bikes in the databases.
 
-End point: http://127.0.0.1:3000/bikes
+##### End point
+`http://127.0.0.1:3000/bikes`
 
-Sample request: http://127.0.0.1:3000/bikes
+##### Sample request
+`http://127.0.0.1:3000/bikes`
 
-Sample: response:
+##### Sample response
+```
 [
     {
         "id": 2,
@@ -167,4 +186,4 @@ Sample: response:
         "updated_at": "2022-12-05T22:38:40.192Z"
     }
 ]
-
+```
