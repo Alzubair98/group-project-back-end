@@ -1,5 +1,112 @@
 Vesrion:  1.0.0
 
+Title: user registration
+
+Description: 
+This end point is used to create an account for a user. the only parameter required is the username.
+
+End point:
+POST: http://localhost:3000/sessions
+
+Sample request
+ 
+{
+    "user": {"username": "francis"}
+}
+
+
+Sample response:
+
+{
+    "stauts": "created",
+    "logged_in": true,
+    "user": {
+        "id": 1,
+        "username": "francis",
+        "created_at": "2022-12-02T16:21:10.813Z",
+        "updated_at": "2022-12-02T16:21:10.813Z"
+    }
+}
+--------------------------------------------------------
+
+title: logout
+
+Description: This API is used to logout a user
+
+end point: 
+DELETE: http://localhost:3000/logout
+
+Sample response:
+{
+    "status": 200,
+    "logged_out": true
+}
+---------------------------------------------------------------
+
+title: reserve a bike
+ Description: This end point is used to reserve a bike
+ end point: 
+ POST: http://127.0.0.1:3000/reservations
+
+ request body
+ {
+    "reservation": { 
+        "user": "wayungi",
+        "bike":"Honda",
+        "location":"Kampala"
+    }
+}
+
+ Sample output:
+ {
+    "reservations": {
+        "id": 8,
+        "user_id": 2,
+        "location": "Kampala",
+        "created_at": "2022-12-15T05:41:06.509Z",
+        "updated_at": "2022-12-15T05:41:06.509Z",
+        "bike_id": 4
+    }
+}
+------------------------------------------------------
+
+title: Get user's reservations
+
+Description: This end point is used to get all the reservations of a single user.
+
+end point: 
+GET: http://127.0.0.1:3000/reservations/{user_id}
+
+sample request: http://127.0.0.1:3000/reservations/2
+
+sample output:
+{
+    "user": {
+        "id": 1,
+        "username": "francis",
+        "created_at": "2022-12-02T16:21:10.813Z",
+        "updated_at": "2022-12-02T16:21:10.813Z"
+    },
+    "bike": {
+        "id": 5,
+        "name": "Twin Cam",
+        "image": "https://picsum.photos/200",
+        "description": "Nice bicycle for kids",
+        "price": "700000.0",
+        "created_at": "2022-12-05T22:38:40.192Z",
+        "updated_at": "2022-12-05T22:38:40.192Z"
+    }
+}
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
 Title: Get bike details
 
 Description: This API returns the name, image url, description and price  of a particulr bike.
