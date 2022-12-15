@@ -4,11 +4,10 @@ class ReservationsController < ApplicationController
     render json: reservations
   end
 
-  def show 
+  def show
     reservation = Reservation.find(params[:id])
     render json: { user: reservation.user,
-       bike: reservation.bike
-    }
+                   bike: reservation.bike }
   end
 
   def new; end
@@ -29,12 +28,9 @@ class ReservationsController < ApplicationController
     end
   end
 
-
-  def destroy 
+  def destroy
     reservation = Reservation.find(params[:reservation][:id])
     reservation.destroy
-    render json: {status:200, reservation_deleted: true}
+    render json: { status: 200, reservation_deleted: true }
   end
-
-
 end

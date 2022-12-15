@@ -18,6 +18,8 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module GroupProjectBackEnd
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -33,5 +35,8 @@ module GroupProjectBackEnd
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # handle errors
+    config.exceptions_app = self.routes
   end
 end
