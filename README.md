@@ -1,15 +1,17 @@
-Vesrion:  1.0.0
+Vesrion: 1.0.0
 
 ## Title: user registration
 
 ##### Description
+
 This end point is used to create an account for a user. The only parameter required is the username.
 
 ##### End point
+
 **POST** `http://localhost:3000/sessions`
 
 ##### Sample request body
- 
+
 ```
 {
     "user": {"username": "francis"}
@@ -17,6 +19,7 @@ This end point is used to create an account for a user. The only parameter requi
 ```
 
 #### Sample response body
+
 ```
 {
     "stauts": "created",
@@ -33,13 +36,15 @@ This end point is used to create an account for a user. The only parameter requi
 ## Title: logout
 
 ##### Description
-This API is used to logout a user
+
+This API is used to logout a user.
 
 ##### End point
 
 **DELETE** `http://localhost:3000/logout`
 
 ##### Sample response
+
 ```
 {
     "status": 200,
@@ -55,13 +60,13 @@ This end point is used to reserve a bike
 
 ##### End point
 
-**POST**  `http://127.0.0.1:3000/reservations`
+**POST** `http://127.0.0.1:3000/reservations`
 
 ##### Request body
 
 ```
  {
-    "reservation": { 
+    "reservation": {
         "user": "wayungi",
         "bike":"Honda",
         "location":"Kampala"
@@ -70,7 +75,8 @@ This end point is used to reserve a bike
 ```
 
 ##### Sample output
-````
+
+```
  {
     "reservations": {
         "id": 8,
@@ -81,16 +87,17 @@ This end point is used to reserve a bike
         "bike_id": 4
     }
 }
-````
-
+```
 
 ## Title: Get user's reservations
 
 ##### Description
+
 This end point is used to get all the reservations of a single user.
 
 ##### End point
-**GET**  `http://127.0.0.1:3000/reservations/{user_id}`
+
+**GET** `http://127.0.0.1:3000/reservations/{user_id}`
 
 ##### Sample request
 
@@ -120,18 +127,21 @@ This end point is used to get all the reservations of a single user.
 
 ## Title: Get bike details
 
-##### Description 
-This API returns the name, image url, description and price  of a particulr bike.
+##### Description
+
+This API returns the name, image url, description and price of a particulr bike.
 
 ##### End point
+
 `http://127.0.0.1:3000/bikes/{id}`
 
 ##### Sample request
+
 `http://127.0.0.1:3000/bikes/1`
 
 ##### Sample response
 
-``` 
+```
 {
  "id": 2,
     "name": "Yamaha",
@@ -143,19 +153,22 @@ This API returns the name, image url, description and price  of a particulr bike
 }
 ```
 
-
 ## Title: Get All bikes
 
 ##### Description
+
 This API returns all the bikes in the databases.
 
 ##### End point
+
 `http://127.0.0.1:3000/bikes`
 
 ##### Sample request
+
 `http://127.0.0.1:3000/bikes`
 
 ##### Sample response
+
 ```
 [
     {
