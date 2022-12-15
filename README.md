@@ -1,14 +1,19 @@
 Vesrion:  1.0.0
 
-Title: Get bike details
+#### Title: Get bike details
 
-Description: This API returns the name, image url, description and price  of a particulr bike.
+##### Description 
+This API returns the name, image url, description and price  of a particulr bike.
 
-End point: http://127.0.0.1:3000/bikes/{id}
+##### End point
+`http://127.0.0.1:3000/bikes/{id}`
 
-Sample request: http://127.0.0.1:3000/bikes/1
+##### Sample request
+`http://127.0.0.1:3000/bikes/1`
 
-Sample: response:
+##### Sample response
+
+``` 
 {
  "id": 2,
     "name": "Yamaha",
@@ -18,19 +23,22 @@ Sample: response:
     "created_at": "2022-12-05T21:34:29.476Z",
     "updated_at": "2022-12-05T21:34:29.476Z"
 }
+```
 
------------------------------------------------------------------------
-Vesrion:  1.0.0
 
-Title: Get All bikes
+#### Title: Get All bikes
 
-Description: This API returns all the bikes in the databases.
+##### Description
+This API returns all the bikes in the databases.
 
-End point: http://127.0.0.1:3000/bikes
+##### End point
+`http://127.0.0.1:3000/bikes`
 
-Sample request: http://127.0.0.1:3000/bikes
+##### Sample request
+`http://127.0.0.1:3000/bikes`
 
-Sample: response:
+##### Sample response
+```
 [
     {
         "id": 2,
@@ -60,4 +68,4 @@ Sample: response:
         "updated_at": "2022-12-05T22:38:40.192Z"
     }
 ]
-
+```
