@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete :logout, to: 'sessions#logout'
   get :logged_in, to: 'sessions#logged_in'
   post :destroy, to: 'reservations#destroy'
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

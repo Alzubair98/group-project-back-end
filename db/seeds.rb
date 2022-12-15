@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+Bike.create(name:'Furgerson', image:"https://picsum.photos/200", description:'Great bikes', price:400)
+Bike.create(name:'Tesla', image:"https://picsum.photos/200", description:'Electric bikes', price:500)
+Bike.create(name:'Ponton', image:"https://picsum.photos/200", description:'Street bikes', price:250)
+
+
