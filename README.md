@@ -1,14 +1,14 @@
 Vesrion:  1.0.0
 
-#### Title: user registration
+## Title: user registration
 
 ##### Description
-This end point is used to create an account for a user. the only parameter required is the username.
+This end point is used to create an account for a user. The only parameter required is the username.
 
-##### End oint
+##### End point
 **POST** `http://localhost:3000/sessions`
 
-##### Sample request
+##### Sample request body
  
 ```
 {
@@ -16,7 +16,7 @@ This end point is used to create an account for a user. the only parameter requi
 }
 ```
 
-#### Sample response:
+#### Sample response body
 ```
 {
     "stauts": "created",
@@ -30,7 +30,7 @@ This end point is used to create an account for a user. the only parameter requi
 }
 ```
 
-#### Title: logout
+## Title: logout
 
 ##### Description
 This API is used to logout a user
@@ -47,7 +47,7 @@ This API is used to logout a user
 }
 ```
 
-#### Title: reserve a bike
+## Title: reserve a bike
 
 ##### Description
 
@@ -84,7 +84,7 @@ This end point is used to reserve a bike
 ````
 
 
-#### Title: Get user's reservations
+## Title: Get user's reservations
 
 ##### Description
 This end point is used to get all the reservations of a single user.
@@ -92,11 +92,11 @@ This end point is used to get all the reservations of a single user.
 ##### End point
 **GET**  `http://127.0.0.1:3000/reservations/{user_id}`
 
-##### sample request
+##### Sample request
 
 `http://127.0.0.1:3000/reservations/2`
 
-##### sample output
+##### Sample output
 
 ```
 {
@@ -118,7 +118,7 @@ This end point is used to get all the reservations of a single user.
 }
 ```
 
-#### Title: Get bike details
+## Title: Get bike details
 
 ##### Description 
 This API returns the name, image url, description and price  of a particulr bike.
@@ -144,7 +144,7 @@ This API returns the name, image url, description and price  of a particulr bike
 ```
 
 
-#### Title: Get All bikes
+## Title: Get All bikes
 
 ##### Description
 This API returns all the bikes in the databases.
