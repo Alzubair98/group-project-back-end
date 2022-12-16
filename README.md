@@ -56,7 +56,7 @@ This API is used to logout a user.
 
 ##### Description
 
-This end point is used to reserve a bike
+This end point is used to reserve a bike. The requirements required for this is the user_id, location and bike_id.
 
 ##### End point
 
@@ -95,7 +95,7 @@ The user and bike should exist in the Database
 
 ##### Description
 
-This end point is used to get all the reservations of a single user.
+This end point is used to get all the reservations is a user login.
 
 ##### End point
 
