@@ -169,7 +169,7 @@ This API returns all the bikes in the databases.
 
 `http://127.0.0.1:3000/bikes`
 
-##### Sample response
+##### Sample responses
 
 ```
 [
