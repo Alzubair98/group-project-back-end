@@ -161,7 +161,7 @@ This API returns the name, image url, description and price of a particulr bike.
 
 This API returns all the bikes in the databases.
 
-##### End point
+##### End points
 
 `http://127.0.0.1:3000/bikes`
 
