@@ -20,7 +20,7 @@ This end point is used to create an account for a user. The only parameter requi
 
 #### Sample response body
 
-```
+''''
 {
     "stauts": "created",
     "logged_in": true,
@@ -31,7 +31,7 @@ This end point is used to create an account for a user. The only parameter requi
         "updated_at": "2022-12-02T16:21:10.813Z"
     }
 }
-```
+'''
 
 ## Title: logout
 
