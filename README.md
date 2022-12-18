@@ -8,7 +8,7 @@ This end point is used to create an account for a user. The only parameter requi
 
 ##### End point
 
-**POST** `http://localhost:3000/sessions`
+***POST*** `http://localhost:3000/sessions`
 
 ##### Sample request body
 
