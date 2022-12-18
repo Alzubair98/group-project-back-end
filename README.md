@@ -20,7 +20,7 @@ This end point is used to create an account for a user. The only parameter requi
 
 #### Sample response body
 
-''''
+```
 {
     "stauts": "created",
     "logged_in": true,
