@@ -99,7 +99,7 @@ This end point is used to get all the reservations is a user login.
 
 ##### End point
 
-**GET** `http://127.0.0.1:3000/reservations/{user_id}`
+***GET*** `http://127.0.0.1:3000/reservations/{user_id}`
 
 ##### Sample request
 
