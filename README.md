@@ -135,7 +135,7 @@ This API returns the name, image url, description and price of a particulr bike.
 
 ##### End point
 
-***GRT***`http://127.0.0.1:3000/bikes/{id}`
+***GET***`http://127.0.0.1:3000/bikes/{id}`
 
 ##### Sample request
 
