@@ -41,7 +41,7 @@ This API is used to logout a user.
 
 ##### End point
 
-**DELETE** `http://localhost:3000/logout`
+***DELETE*** `http://localhost:3000/logout`
 
 ##### Sample response
 
