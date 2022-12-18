@@ -190,15 +190,6 @@ This API returns all the bikes in the databases.
         "price": "500000.0",
         "created_at": "2022-12-05T21:36:17.156Z",
         "updated_at": "2022-12-05T21:36:17.156Z"
-    },
-    {
-        "id": 5,
-        "name": "Twin Cam",
-        "image": "https://picsum.photos/200",
-        "description": "Nice bicycle for kids",
-        "price": "700000.0",
-        "created_at": "2022-12-05T22:38:40.192Z",
-        "updated_at": "2022-12-05T22:38:40.192Z"
     }
 ]
 ```
