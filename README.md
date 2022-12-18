@@ -163,7 +163,7 @@ This API returns all the bikes in the databases.
 
 ##### End points
 
-`http://127.0.0.1:3000/bikes`
+***GET*** `http://127.0.0.1:3000/bikes`
 
 ##### Sample request
 
