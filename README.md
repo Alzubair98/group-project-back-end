@@ -60,7 +60,7 @@ This end point is used to reserve a bike. The requirements required for this is 
 
 ##### End point
 
-**POST** `http://127.0.0.1:3000/reservations`
+***POST*** `http://127.0.0.1:3000/reservations`
 
 The user and bike should exist in the Database before effecting a reservation
 
